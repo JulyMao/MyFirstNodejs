@@ -1,4 +1,4 @@
-var http = require('http');
+const http = require('http');
 http.createServer(function(request,response){
   response.end('Hello World!');
 }).listen(3000);

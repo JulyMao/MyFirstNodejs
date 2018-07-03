@@ -10,10 +10,10 @@ console.log('文件内容是：' + iconv.decode(data,'gbk'));
 
 
 
-var fs = require('fs');
-var buf = new Buffer(1024);
-var iconv = require('iconv-lite');
-buf.e
+const fs = require('fs');
+const buf = new Buffer(1024);
+const iconv = require('iconv-lite');
+
 fs.open('E:/node.js/node/input.txt','r+',function(err,fd){
   if(err)
     return console.error(err);
