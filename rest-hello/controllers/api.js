@@ -1,12 +1,5 @@
 const fs = require('fs');
-// 存储Product列表，相当于模拟数据库:
-// var products = [{
-//     name: 'iPhone',
-//     price: 6999
-// }, {
-//     name: 'Kindle',
-//     price: 999
-// }];
+
 var url = '1.txt'
 
 module.exports = {
@@ -18,7 +11,6 @@ module.exports = {
 
         // 设置Response Body:
         ctx.response.body = {
-            // products: products,
             file: data.toString(),
             request: ctx.request.body
         };
