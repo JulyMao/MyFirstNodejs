@@ -2,6 +2,14 @@ const fs = require('fs');
 
 var url = '1.txt'
 
+var products = [{
+    name: 'iPhone',
+    price: 6999
+}, {
+    name: 'Kindle',
+    price: 999
+}];
+
 module.exports = {
     'POST /api/file': async (ctx, next) => {
         // 设置Content-Type:
@@ -15,6 +23,15 @@ module.exports = {
             request: ctx.request.body
         };
     },
+
+    'GET /api/products': async (ctx, next) => {
+        // 设置Content-Type:
+        ctx.response.type = 'application/json';
+        // 设置Response Body:
+        ctx.response.body = {
+            products: products
+        };
+    }
 
     /*'POST /api/file': async (ctx, next) => {
     var p = {
